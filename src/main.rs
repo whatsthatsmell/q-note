@@ -4,6 +4,9 @@ use std::{fs, io::Write, path::Path};
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
+    /// Root directory of notes: `$HOME/<ROOT>`
+    #[clap(default_value_t = String::from("notes"))]
+    root: String,
     /// Text of note
     #[clap(short, long)]
     note: String,
@@ -19,7 +22,7 @@ fn main() {
         .create(true)
         .open(
             Path::new(&dirs_next::home_dir().unwrap())
-                .join("notes")
+                .join(args.root)
                 .join(args.category)
                 .join("quick_notes.txt"),
         )

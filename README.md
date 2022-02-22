@@ -14,7 +14,7 @@ That will install it in your `~/.cargo/bin/`
 
 Pass a `--category` and your `--note`.
 
-You must have a `$HOME/notes/` directory and subdirectories with names matching the categories you want.
+You must have a `$HOME/notes/` directory (or set your own `<ROOT>`) and you need subdirectories with names matching the categories you want.
 
 For each category, a file named `quick_notes.txt` will be created when you first use the category. After that, each note in that category will be appended to that file.
 
@@ -26,10 +26,13 @@ tech/Rusty> qn -c "rust" -n "Remember to rewrite it in Rust"
 baseball/dodgers> qn --help
 q-note 0.1.0
 Joel Palmer <rust_nvim@pm.me>
-qn (quick note) is a simple, fast and user-friendly way to save notes
+qn (quick note) is a simple, fast and user-friendly way to save organized notes
 
 USAGE:
-    qn --note <NOTE> --category <CATEGORY>
+    qn --note <NOTE> --category <CATEGORY> [ROOT]
+
+ARGS:
+    <ROOT>    Root directory of notes: `$HOME/<ROOT>` [default: notes]
 
 OPTIONS:
     -c, --category <CATEGORY>    Category for note to be saved under
@@ -43,6 +46,7 @@ OPTIONS:
 - [x] Take a category that maps to a subdirectory
 - [ ] Allow for category creation and/or validation
 - [ ] Allow for configuration of locations and categories
+	- [x] Allow users to set their root directory
 - [ ] Neovim plugin
   - [ ] Telescope extension?
 - [ ] Minor CRUD
