@@ -43,6 +43,9 @@ OPTIONS:
 - [x] Take a category that maps to a subdirectory
 - [ ] Allow for category creation and/or validation
 - [ ] Allow for configuration of locations and categories
+- [ ] Neovim plugin
+  - [ ] Telescope extension?
+- [ ] Minor CRUD
 - [ ] Integrate with **Todoist** API*
 - [ ] Integrate with **Google Calendar** API*
 
