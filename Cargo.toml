@@ -1,6 +1,6 @@
 [package]
 name = "q-note"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Joel Palmer <rust_nvim@pm.me>"]
 description = "qn (quick note) is a simple, fast and user-friendly way to save organized notes"
@@ -10,5 +10,5 @@ name = "qn"
 path = "src/main.rs"
 
 [dependencies]
-clap = { version = "3.1.18", features = ["derive"] }
+clap = { version = "3.2.10", features = ["derive"] }
 dirs-next = "2.0"
